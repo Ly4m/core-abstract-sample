@@ -1,8 +1,6 @@
 package com.example.demo.dto.in;
 
-import java.awt.Color;
 import java.math.BigInteger;
-import lombok.RequiredArgsConstructor;
 
 public class ShoeFilter {
 
