@@ -1,6 +1,5 @@
-package com.example.demo.dto.out;
+package com.example.demo.dto.out.stock;
 
-import com.example.demo.dto.in.StockFilter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;
@@ -13,13 +12,18 @@ import java.util.List;
 @JsonDeserialize(builder = Stock.StockBuilder.class)
 public class Stock {
 
-    private StockFilter.StockState state;
-    private List<Shoe> shoes;
-
+    private StockState state;
+    private List<StockLine> shoes;
 
     @JsonPOJOBuilder(withPrefix = "")
-    public static class StockBuilder{
+    public static class StockBuilder {
 
     }
 
+    public enum StockState {
+        EMPTY,
+        FULL,
+        SOME,
+        ;
+    }
 }
