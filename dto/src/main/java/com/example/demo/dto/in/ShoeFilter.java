@@ -1,20 +1,21 @@
 package com.example.demo.dto.in;
 
-import java.awt.Color;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigInteger;
-import lombok.RequiredArgsConstructor;
 
 public class ShoeFilter {
 
-  public BigInteger size;
-  public Color color;
+    public BigInteger size;
+    public Color color;
 
-  public enum Color{
+    public enum Color {
 
-    BLACK,
-    BLUE,
-    ;
+        @JsonProperty("BLACK")
+        BLACK,
+        @JsonProperty("BLUE")
+        BLUE,
 
-  }
+    }
 
 }
